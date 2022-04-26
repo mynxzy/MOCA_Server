@@ -11,14 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="stylesheet" href="./resources/css/chat.css">
     <!--jquery-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <!-- socket -->
     <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.min.js"></script>
-    <!--script-->
-<!--     <script src="./resources/js/chat.js"></script> -->
 </head>
 <body>
 	<h2>1:1 채팅</h2>
