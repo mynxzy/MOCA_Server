@@ -16,4 +16,8 @@ public class MainController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "/chat", method = RequestMethod.GET)
+	public String chatGet() {
+		return "chat";
+	}
 }

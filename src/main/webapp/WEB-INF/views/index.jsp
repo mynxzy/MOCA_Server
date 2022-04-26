@@ -58,7 +58,7 @@
                             <a href="/review/myReview" id="myrv">내리뷰</a>
                         </li>
                         <li>
-                            <a href="#">1 : 1 채팅</a>
+                            <a href="chat">1 : 1 채팅</a>
                         </li>
                         <li class="lastList">
                         	<p>${session.u_id}님 반갑습니다</p>
