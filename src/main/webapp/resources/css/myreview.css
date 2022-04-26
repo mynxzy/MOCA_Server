@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#wrap{
+    width: 100%;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+h2{
+    padding: 20px 0;
+}
+.box1{
+    margin-bottom: 20px;
+}
+.box2{
+    margin-bottom: 20px;
+}
+.rBtn{
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background-color: #333;
+}
+.title{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}

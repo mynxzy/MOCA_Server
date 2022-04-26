@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 20px;
+    font-size: 13px;
+    color: #222;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+ul, ol{
+    list-style: none;
+}
+a{  
+    text-decoration: none;
+}
+img{
+    vertical-align: top;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+.hide{
+    display: block;
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+input{
+    font-family: 'Noto Sans KR', sans-serif;
+    vertical-align: top;
+}
+
+fieldset{
+    border: 0;
+}
+legend{
+    display: none;
+}
+/*초기화 끝*/

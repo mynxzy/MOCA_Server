@@ -1,0 +1,36 @@
+#wrap{
+    padding: 20px;
+}
+.row1{
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.row1 h1{
+    font-size: 30px;
+    line-height: 50px;
+}
+.row1 p{
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+.row1 p a{
+    color: #444;
+}
+.row2 ul li{
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.row2 li a h2{
+    color: #333;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.row2 li h3{
+    color: #444;
+    margin-bottom: 5px;
+}
+.row2 li .text{
+    color: #555;
+}
