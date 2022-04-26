@@ -1,1 +1,32 @@
 @charset "UTF-8";
+#wrap{
+    min-width: 320px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    padding: 20px 0;
+}
+#messageArea{
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+.msgBox{
+    width: 100%;
+    line-height: 35px;
+}
+#message{
+    width: 64%;
+    height: 32px;
+}
+#sendBtn{
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background-color: #333;
+}
