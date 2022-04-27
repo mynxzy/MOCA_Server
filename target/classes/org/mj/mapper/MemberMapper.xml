@@ -10,6 +10,21 @@
   </insert>
   
   <select id="Login" resultType="org.mj.model.MemberDTO">
- 	select * from member where u_id=#{u_id} and u_pw=#{u_pw}
+ 	select * from member 
+ 	where u_id=#{u_id} and u_pw=#{u_pw}
   </select>
+  
+  <select id="MemberModify" resultType="org.mj.model.MemberDTO">
+  	select * from member
+  	where u_id = #{u_id}
+  </select>
+  
+  <update id="memberModify">
+  	update member
+  	set u_nick = #{u_nick},
+  		u_tel = #{u_tel},
+  		u_email = #{u_email},
+  		u_address = #{u_address}
+  	where u_id = #{u_id}
+  </update>
 </mapper>

@@ -23,7 +23,6 @@ public class ReviewController {
 		
 		HttpSession session = request.getSession();
 		MemberDTO mdto = (MemberDTO)session.getAttribute("session");	
-		
 		try {
 			String uId = mdto.getU_id();
 			model.addAttribute("rlist", rservice.ReviewList(uId));

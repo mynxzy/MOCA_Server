@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,32 +25,47 @@
 	   <div class="title">
 	       <h1>회원정보수정</h1>
 	   </div><!--.title-->
-	   <form action="" method="post" id="signForm">
+	   
+	   <form action="/member/myPage" method="post" id="signForm">
 	    <div class="signForm">
 	        <ul>
 	            <li>
-	                <label for="userName"><span>이름</span><input type="text" id="userName" name="u_name" class="box"></label>
+	                <label for="userName">
+	                	<span>이름</span><input type="text" id="userName" name="u_name" class="box" value="${mmodify.u_name}" readonly>
+	                </label>
 	            </li>
 	            <li>
-	                <label for="userId"><span>아이디</span><input type="text" id="userId" name="u_id" class="box"></label>
+	                <label for="userId">
+	                	<span>아이디</span><input type="text" id="userId" name="u_id" class="box" value="${mmodify.u_id}" readonly>
+	                </label>
 	            </li>
 	            <li>
-	                <label for="userPw"><span>비밀번호</span><input type="password" id="userPw" name="u_pw" class="box"></label>
+	                <label for="userPw">
+	                	<span>비밀번호</span><input type="password" id="userPw" name="u_pw" class="box" value="${mmodify.u_pw}">
+	                </label>
 	            </li>
 	            <li>
-	                <label for="nickName"><span>닉네임</span><input type="text" id="nickName" name="u_nick" class="box"></label>
+	                <label for="nickName">
+	                	<span>닉네임</span><input type="text" id="nickName" name="u_nick" class="box" value="${mmodify.u_nick}">
+	                </label>
 	            </li>
 	            <li>
-	                <label for="userTel"><span>전화번호</span><input type="text" id="userTel" name="u_tel" class="box"></label>
+	                <label for="userTel">
+	                	<span>전화번호</span><input type="text" id="userTel" name="u_tel" class="box" value="${mmodify.u_tel}">
+	                </label>
 	            </li>
 	            <li>
-	                <label for="email"><span>이메일</span><input type="email" id="email" name="u_email" class="box"></label>
+	                <label for="email">
+	                	<span>이메일</span><input type="email" id="email" name="u_email" class="box" value="${mmodify.u_email}">
+	                </label>
 	            </li>  
 	            <li>
-	                <label for="address"><span>주소</span><input type="text" id="address" name="u_address" class="box"></label>
+	                <label for="address">
+	                	<span>주소</span><input type="text" id="address" name="u_address" class="box" value="${mmodify.u_address}">
+	                </label>
 	            </li>
 	        </ul>
-	        <p><button class="signChk" onclick="checkForm()">수정</button></p>
+	        <p><button class="signChk">수정</button></p>
 	   	</div><!--.signForm-->
 	    </form>
 	</div><!--#wrap-->

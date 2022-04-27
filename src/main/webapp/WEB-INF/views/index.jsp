@@ -64,10 +64,10 @@
                         	<a href="/member/myPage">마이페이지</a>
                         </li>
                         <li class="lastList">
+                        	<p>${session.u_id}님 반갑습니다</p>
                         	<a href="/member/logout">로그아웃</a>
                         </li>
                     </ul>
-                    <p>${session.u_id}님 반갑습니다</p>
                 </div>
             </div><!--.menu-->
         </header>

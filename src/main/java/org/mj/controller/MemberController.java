@@ -1,11 +1,13 @@
 package org.mj.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.mj.model.MemberDTO;
 import org.mj.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -49,9 +51,23 @@ public class MemberController {
 	
 	// 회원정보수정으로 가기위한 컨트롤러
 	@RequestMapping(value = "/member/myPage", method = RequestMethod.GET)
-	public String myPageGet() {
-		
-		return "/member/myPage";
+	public String myPageGet(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		MemberDTO mdto = (MemberDTO)session.getAttribute("session");	
+		try {
+			String uId = mdto.getU_id();
+			model.addAttribute("mmodify", mservice.MemberModify(uId));
+			return "member/myPage";
+		}catch(NullPointerException ne) {
+				return "/member/login";
+		}
+	}
+	
+	// 회원수정이 이루어지는 컨트롤러
+	@RequestMapping(value = "/member/myPage", method = RequestMethod.POST)
+	public String myPagePost(MemberDTO mdto) {
+		mservice.memberModify(mdto);
+		return "redirect:/index";
 	}
 	
 	// 로그아웃
