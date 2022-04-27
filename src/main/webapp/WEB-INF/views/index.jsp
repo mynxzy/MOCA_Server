@@ -60,11 +60,14 @@
                         <li>
                             <a href="chat">1 : 1 채팅</a>
                         </li>
+                        <li>
+                        	<a href="/member/myPage">마이페이지</a>
+                        </li>
                         <li class="lastList">
-                        	<p>${session.u_id}님 반갑습니다</p>
                         	<a href="/member/logout">로그아웃</a>
                         </li>
                     </ul>
+                    <p>${session.u_id}님 반갑습니다</p>
                 </div>
             </div><!--.menu-->
         </header>
@@ -128,7 +131,7 @@
     </div><!--#wrap-->
 
 	<!-- 카카오 aip -->
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d8f9b7dd2b1b2b09aed9f6abe9a0cb94"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d8f9b7dd2b1b2b09aed9f6abe9a0cb94&libraries=services,clusterer"></script>
 	<!--script-->
     <script src="./resources/js/main.js"></script>
 </body>

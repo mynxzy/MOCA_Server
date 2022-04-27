@@ -47,6 +47,13 @@ public class MemberController {
 		return "redirect:/member/login";
 	}
 	
+	// 회원정보수정으로 가기위한 컨트롤러
+	@RequestMapping(value = "/member/myPage", method = RequestMethod.GET)
+	public String myPageGet() {
+		
+		return "/member/myPage";
+	}
+	
 	// 로그아웃
 	@RequestMapping(value = "/member/logout", method = RequestMethod.GET)
 	public String logoutGet(HttpSession session) {
