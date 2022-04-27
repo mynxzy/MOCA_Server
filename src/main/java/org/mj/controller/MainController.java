@@ -20,4 +20,10 @@ public class MainController {
 	public String chatGet() {
 		return "chat";
 	}
+	
+	@RequestMapping(value = "/projectInfo", method = RequestMethod.GET)
+	public String projectInfoGet() {
+		return "projectInfo";
+	}
 }
+

@@ -195,6 +195,7 @@ ul .slick-dots{
     padding: 10px;
     box-sizing: border-box;
     background-color: rgba(226, 226, 226, 0.521);
+    margin-bottom: 200px;
 }
 .row3 a{
     display: flex;
@@ -210,3 +211,28 @@ ul .slick-dots{
     color: #222;
 }
 
+/* 푸터 */
+#footer{
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    background-color: #444;
+    padding: 30px 20px;
+}
+.fbox1{
+    font-size: 12px;
+    line-height: 25px;
+}
+.fbox2{
+    line-height: 30px;
+}
+.fbox2 a{
+    color: lightpink;
+}
+.gitimg{
+    width: 50px;
+}
+.gitimg img{
+    margin-left: 10px;
+}

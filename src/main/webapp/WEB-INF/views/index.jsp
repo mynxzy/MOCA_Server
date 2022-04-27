@@ -81,12 +81,6 @@
                 <ul class="cafeList">
                     <li>
                         <a href="#">
-                            <img src="./resources/img/cafe1.jpg" alt="">
-                            <p>스타벅스</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
                             <img src="./resources/img/cafe2.jpg" alt="">
                             <p>THINK COFFEE</p>
                         </a>
@@ -101,6 +95,12 @@
                         <a href="#">
                             <img src="./resources/img/cafe4.jpg" alt="">
                             <p>GLONOJAD</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./resources/img/cafe1.jpg" alt="">
+                            <p>스타벅스</p>
                         </a>
                     </li>
                     <li>
@@ -126,7 +126,32 @@
         </div><!--#container-->
 
         <footer id="footer">
-			
+			<div class="fbox1">
+                <ul>
+                    <li>
+                        copyrightⓒ
+                    </li>
+                    <li>
+                        만든이 | 강민지
+                    </li>
+                    <li>
+                        전화번호 | 010-6419-3100
+                    </li>
+                    <li>
+                        email | alswl7742.naver.com
+                    </li>
+                </ul>
+            </div>
+            <div class="fbox2">
+                <ul>
+                    <li>
+                        <a href="projectInfo">프로젝트 소개</a>
+                    </li>
+                    <li class="gitimg">
+                        <a href="https://github.com/mynxzy/MOCA_Server.git"><img src="./resources/img/icons8-github-100.png"></a>
+                    </li>     
+                </ul>
+            </div>
         </footer>
     </div><!--#wrap-->
 
