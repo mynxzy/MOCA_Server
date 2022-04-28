@@ -7,6 +7,7 @@ public class ReviewDTO {
 	private String nick;
 	private String regdate;
 	private String u_id;
+	private String shopno;
 	
 	
 	public int getRno() {
@@ -45,11 +46,17 @@ public class ReviewDTO {
 	public void setU_id(String u_id) {
 		this.u_id = u_id;
 	}
+	public String getShopno() {
+		return shopno;
+	}
+	public void setShopno(String shopno) {
+		this.shopno = shopno;
+	}
 	
 	@Override
 	public String toString() {
 		return "ReviewDTO [rno=" + rno + ", title=" + title + ", content=" + content + ", nick=" + nick + ", regdate="
-				+ regdate + ", u_id=" + u_id + "]";
+				+ regdate + ", u_id=" + u_id + ", shopno=" + shopno + "]";
 	}
 	
 }

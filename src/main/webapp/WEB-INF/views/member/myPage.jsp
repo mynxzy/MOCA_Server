@@ -70,5 +70,6 @@
 	   	</div><!--.signForm-->
 	    </form>
 	</div><!--#wrap-->
+	<script type="text/javascript" src="../resources/js/myPage.js"></script>
 </body>
 </html>
