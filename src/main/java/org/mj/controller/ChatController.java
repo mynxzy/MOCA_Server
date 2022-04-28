@@ -13,7 +13,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 @RequestMapping("/chat")
 public class ChatController extends TextWebSocketHandler{
-	
+	//
 	private List<WebSocketSession> sessionList = new ArrayList<WebSocketSession>();
 	private Logger logger = LoggerFactory.getLogger(ChatController.class);
 	
