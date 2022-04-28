@@ -22,7 +22,10 @@
 </head>
 <body>
 	<div id="wrap">
-		<h2>카페리스트</h2>
+		<div class="title">
+			<h2>카페리스트</h2>
+			<p><a href="/index">홈으로</a>
+		</div>
 		<hr>
 		<div>
 			<ul>
@@ -30,7 +33,7 @@
 					<li>
 						<input type="hidden" value="${list.shopno}">
 			            <h2>${list.shopname}</h2>
-			            <p>${list.shoptime}</p>
+			            <p>영업시간 : ${list.shoptime}</p>
 			            <p>${list.shopaddress}</p> 	
 			            <p>${list.shoptel}</p>
 					</li>

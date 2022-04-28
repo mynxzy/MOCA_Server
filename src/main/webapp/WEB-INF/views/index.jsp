@@ -66,8 +66,10 @@
                         <li>
                         	<a href="/shop/shopList">매장목록</a>
                         </li>
+                        <li>
+                        	<a href="/shop/shop">매장등록</a>
+                        </li>
                         <li class="lastList">
-                        	<p>${session.u_id}님 반갑습니다</p>
                         	<a href="/member/logout">로그아웃</a>
                         </li>
                     </ul>
@@ -82,42 +84,15 @@
             <div class="row2">
                 <h2>주변카페 LIST</h2>
                 <ul class="cafeList">
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe2.jpg" alt="">
-                            <p>THINK COFFEE</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe3.jpg" alt="">
-                            <p>Brick House</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe4.jpg" alt="">
-                            <p>GLONOJAD</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe1.jpg" alt="">
-                            <p>스타벅스</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe5.jpg" alt="">
-                            <p>Ludwig</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./resources/img/cafe6.jpg" alt="">
-                            <p>Liliy</p>
-                        </a>
-                    </li>
+	                <c:forEach items="${slist}" var="list">
+						<li>
+							<a href="">
+								<input type="hidden" value="${list.shopno}">
+								<img src="./resources/img/cafe2.jpg" alt="">
+								<p>${list.shopname}</p>
+							</a>
+						</li>
+					</c:forEach>
                 </ul>
             </div><!--.row2-->
             <div class="row3">

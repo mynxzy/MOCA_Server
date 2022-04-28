@@ -1,5 +1,9 @@
 package org.mj.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.mj.model.MemberDTO;
 import org.mj.model.ShopDTO;
 import org.mj.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +25,20 @@ public class ShopController {
 	
 	// shop등록이 이루어지는 컨트롤러
 	@RequestMapping(value = "/shop/shop", method = RequestMethod.POST)
-	public String shopPost(ShopDTO sdto) {
-		sservice.ShopInsert(sdto);
-		return "redirect:/index";
+	public String shopPost(ShopDTO sdto, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		MemberDTO mdto = (MemberDTO)session.getAttribute("session");
+		try {
+			String b_num = mdto.getB_number();
+			if(b_num != null && b_num != "") {
+				sservice.ShopInsert(sdto);
+				return "redirect:/index";
+			} else {
+				return "redirect:/index";
+			}	
+		}catch(NullPointerException ne) {
+				return "/member/login";
+		}		
 	}
 
 	// shop 목록을 보기위한 컨트롤러

@@ -5,8 +5,8 @@
 <mapper namespace="org.mj.mapper.MemberMapper">
 
   <insert id="MemberInsert">
-  	insert into member(u_name, u_id, u_pw, u_nick, u_tel, u_email, u_address)
-  	values(#{u_name}, #{u_id}, #{u_pw}, #{u_nick}, #{u_tel}, #{u_email}, #{u_address})
+  	insert into member(u_name, u_id, u_pw, u_nick, u_tel, u_email, u_address, b_number)
+  	values(#{u_name}, #{u_id}, #{u_pw}, #{u_nick}, #{u_tel}, #{u_email}, #{u_address}, #{b_number})
   </insert>
   
   <select id="Login" resultType="org.mj.model.MemberDTO">

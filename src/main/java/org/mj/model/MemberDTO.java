@@ -8,6 +8,7 @@ public class MemberDTO {
 	private String u_tel;
 	private String u_address;
 	private String u_email;
+	private String b_number;
 	
 	public String getU_name() {
 		return u_name;
@@ -52,11 +53,16 @@ public class MemberDTO {
 	public void setU_email(String u_email) {
 		this.u_email = u_email;
 	}
+	public String getB_number() {
+		return b_number;
+	}
+	public void setB_number(String b_number) {
+		this.b_number = b_number;
+	}
 	
 	@Override
 	public String toString() {
 		return "MemberDTO [u_name=" + u_name + ", u_id=" + u_id + ", u_pw=" + u_pw + ", u_nick=" + u_nick + ", u_tel="
-				+ u_tel + ", u_adderss=" + u_address + ", u_email=" + u_email + "]";
+				+ u_tel + ", u_address=" + u_address + ", u_email=" + u_email + ", b_number=" + b_number + "]";
 	}
-	
 }
