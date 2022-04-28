@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원탈퇴</title>
     <!--웹폰트-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,22 +23,21 @@
     <div id="wrap">
         <div class="title">
             <h1>로그인</h1>
-            <p><a href="/member/sign">회원가입</a></p>
+            <p><a href="/index">홈으로</a></p>
         </div><!--.title-->
-        <form action="/member/login" method="post">
+        <form action="/member/delete" method="post">
 	        <div class="signForm">
 	            <ul>
 	                <li>
-	                    <label for="userId"><span>아이디</span><input type="text" id="userId" class="box" name="u_id"></label>
+	                    <label for="userId"><span>아이디</span><input type="text" id="userId" class="box" name="u_id" value="${session.u_id}" readonly></label>
 	                </li>
 	                <li>
 	                    <label for="userPw"><span>비밀번호</span><input type="password" id="userPw" class="box" name="u_pw"></label>
 	                </li>
 	            </ul>
-	            <p><button class="signChk">로그인</button></p>
+	            <p><button class="signChk">확인</button></p>
 	        </div><!--.signForm-->
         </form>
     </div><!--#wrap-->
-
 </body>
 </html>

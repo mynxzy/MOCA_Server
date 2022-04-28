@@ -14,4 +14,7 @@ public interface MemberService {
 	
 	// 수정을 눌렀을때 회원정보 update
 	public void memberModify(MemberDTO mdto);
+	
+	// 회원탈퇴를 눌렀을때 회원 delete
+	public void MemberDelete(MemberDTO mdto);
 }

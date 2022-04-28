@@ -27,4 +27,9 @@
   		u_address = #{u_address}
   	where u_id = #{u_id}
   </update>
+  
+  <delete id="MemberDelete">
+  	delete from member 
+	where u_id = #{u_id} and u_pw = #{u_pw}
+  </delete>
 </mapper>

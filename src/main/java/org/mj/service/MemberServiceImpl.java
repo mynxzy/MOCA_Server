@@ -29,4 +29,9 @@ public class MemberServiceImpl implements MemberService{
 	public void memberModify(MemberDTO mdto) {
 		mmapper.memberModify(mdto);
 	}
+	
+	// 회원탈퇴를 눌렀을때 회원 delete
+	public void MemberDelete(MemberDTO mdto) {
+		mmapper.MemberDelete(mdto);
+	}
 }

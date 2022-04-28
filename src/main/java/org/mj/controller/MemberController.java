@@ -76,4 +76,27 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:/index";
 	}
+	
+	// 회원탈퇴화면으로 가기위한 컨트롤러
+	@RequestMapping(value = "/member/delete", method = RequestMethod.GET)
+	public String memberDeleteGet() {
+		return "/member/delete";
+	}
+	
+	// 회원탈퇴가 이루어지는 컨트롤러
+	@RequestMapping(value = "/member/delete", method = RequestMethod.POST)
+	public String memberDeletePost(MemberDTO mdto, HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		MemberDTO mdtoget = (MemberDTO)session.getAttribute("session");
+		
+		String oldPass = mdto.getU_pw();
+		String newPass = mdtoget.getU_pw();
+		
+		if(!(oldPass.equals(newPass))) {
+			return "redirect:/member/myPage";
+		}	
+		mservice.MemberDelete(mdto);
+		return "/index";
+	}
 }

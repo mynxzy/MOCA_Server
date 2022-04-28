@@ -24,6 +24,7 @@
 	<div id="wrap">
 	   <div class="title">
 	       <h1>회원정보수정</h1>
+	       <p><a href="/member/delete">회원탈퇴</a></p>
 	   </div><!--.title-->
 	   
 	   <form action="/member/myPage" method="post" id="signForm">

@@ -14,4 +14,7 @@ public interface MemberMapper {
 	
 	// 수정버튼을 누르면 회원정보 update
 	public void memberModify(MemberDTO mdto);
+	
+	// 회원탈퇴를 눌렀을때 회원 delete
+	public void MemberDelete(MemberDTO mdto);
 }
