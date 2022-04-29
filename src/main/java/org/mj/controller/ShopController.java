@@ -47,4 +47,10 @@ public class ShopController {
 		model.addAttribute("slist", sservice.ShopList(sdto));
 		return "/shop/shopList";
 	}
+	
+	// shopDetial 페이지로 가기위한 컨트롤러
+	@RequestMapping(value = "/shop/shopDetail", method = RequestMethod.GET)
+	public String shopDetailGet() {
+		return "/shop/shopDetail";
+	}
 }

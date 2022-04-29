@@ -72,34 +72,15 @@ $(function(){
       	$('.lastList').hide();
       }
       
-	// 로그인이 되었을때만 내리뷰를 눌렀을때 리뷰를 볼수있게 
-	// 아닐시 login.jsp로 이동
-
-//	$('#myrv').on('click' ,function(){
-//		var log = $("#u_id").val();
-//		if(log != null && log != ""){
-//	         var form = document.createElement("form");
-//	
-//	         form.setAttribute("charset", "UTF-8");
-//	         form.setAttribute("method", "Post");  //Post 방식
-//	         form.setAttribute("action", "/review/myReview"); //요청 보낼 주소
-//	         
-//	         var hiddenField = document.createElement("input");
-//	         hiddenField.setAttribute("type", "hidden");
-//	         hiddenField.setAttribute("name", "u_id");
-//	         hiddenField.setAttribute("value", log);
-//	         
-//	         form.appendChild(hiddenField);
-//	         document.body.appendChild(form);
-//	         form.submit();
-//		} else{
-//			console.log("값저장없음");
-//			location.href = "/member/login";
-//		}
-//		location.href = "/review/myReview";
-//	})
-      
 }) // 시작 function 
 
+var images = new Array('./resources/img/cafe1.jpg', './resources/img/cafe2.jpg', './resources/img/cafe3.jpg', './resources/img/cafe4.jpg', './resources/img/cafe5.jpg', './resources/img/cafe6.jpg');
 
+function imgCreate(){
+	var ranNum = Math.floor(Math.random()*6);
+	
+	var x = document.createElement("IMG");
+	x.src = images[ranNum];
+	document.body.appendChild(x);
+}
 

@@ -50,7 +50,7 @@
 	                    <label for="address"><span>주소</span><input type="text" id="address" name="u_address" class="box"></label>
 	                </li>
 	                <li>
-	                    <label for="bNum"><span>사업번호</span><input type="text" id="bNum" name="b_number" class="box"></label>
+	                    <label for="bNum"><span>사업번호</span><input type="text" id="bNum" name="b_number" class="box" placeholder="사업자번호가 있으신분만 입력하세요"></label>
 	                </li>
 	            </ul>
 	            <p><button class="signChk" onclick="checkForm()">확인</button></p>

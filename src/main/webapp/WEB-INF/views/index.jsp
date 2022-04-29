@@ -79,6 +79,10 @@
 
         <div id="container">
             <div class="row1">
+            	<form action="" class="searchBox">
+                    <input type="text" name="search" placeholder="검색하실 카페명을 입력해주세요" class="searchInput">
+                    <input type="button" value="검색" class="scBtn">
+                </form>
                 <div id="map"></div>
             </div><!--.row1-->
             <div class="row2">
@@ -86,9 +90,10 @@
                 <ul class="cafeList">
 	                <c:forEach items="${slist}" var="list">
 						<li>
-							<a href="">
+							<a href="/shop/shopDetail">
 								<input type="hidden" value="${list.shopno}">
-								<img src="./resources/img/cafe2.jpg" alt="">
+								<img src="./resources/img/cafe"+${list.shopno}+".jpg">
+								<div id="imgBox"></div>
 								<p>${list.shopname}</p>
 							</a>
 						</li>
