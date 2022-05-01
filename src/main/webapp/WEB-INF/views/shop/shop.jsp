@@ -28,6 +28,9 @@
         <form action="/shop/shop" method="post" id="signForm">
 	        <div class="signForm">
 	            <ul>
+	            	<li>
+	            		<input type="hidden" name="ransrc" id="ran" value="">
+	            	</li>
 	                <li>
 	                    <label for="shopName"><span>매장명</span><input type="text" id="shopName" name="shopname" class="box"></label>
 	                </li>
@@ -41,12 +44,12 @@
 	                    <label for="time"><span>운영시간</span><input type="text" id="time" name="shoptime" class="box"></label>
 	                </li>
 	            </ul>
-	            <p><button class="signChk">확인</button></p>
+	            <p><button class="signChk" id="shopChk">확인</button></p>
         	</div><!--.signForm-->
         </form>
     </div><!--#wrap-->
   
     <!-- script -->
-    <script type="text/javascript" src="../resources/js/sign.js"></script>
+    <script type="text/javascript" src="../resources/js/shop.js"></script>
 </body>
 </html>

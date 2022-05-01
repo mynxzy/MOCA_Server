@@ -6,6 +6,7 @@ public class ShopDTO {
 	private String shoptel;
 	private String shopaddress;
 	private String shoptime;
+	private String ransrc;
 	
 	public int getShopno() {
 		return shopno;
@@ -37,11 +38,18 @@ public class ShopDTO {
 	public void setShoptime(String shoptime) {
 		this.shoptime = shoptime;
 	}
+	public String getRansrc() {
+		return ransrc;
+	}
+	public void setRansrc(String ransrc) {
+		this.ransrc = ransrc;
+	}
 	
 	@Override
 	public String toString() {
 		return "ShopDTO [shopno=" + shopno + ", shopname=" + shopname + ", shoptel=" + shoptel + ", shopaddress="
-				+ shopaddress + ", shoptime=" + shoptime + "]";
+				+ shopaddress + ", shoptime=" + shoptime + ", ransrc=" + ransrc + "]";
 	}
+	
 	
 }

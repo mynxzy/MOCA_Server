@@ -92,8 +92,7 @@
 						<li>
 							<a href="/shop/shopDetail">
 								<input type="hidden" value="${list.shopno}">
-								<img src="./resources/img/cafe"+${list.shopno}+".jpg">
-								<div id="imgBox"></div>
+								<img src="${list.ransrc}">
 								<p>${list.shopname}</p>
 							</a>
 						</li>

@@ -5,8 +5,8 @@
 <mapper namespace="org.mj.mapper.ShopMapper">
 
 	<insert id="ShopInsert">
-		insert into coffeeshop(shopname, shoptel, shopaddress, shoptime)
-		values(#{shopname}, #{shoptel}, #{shopaddress}, #{shoptime})
+		insert into coffeeshop(shopname, shoptel, shopaddress, shoptime, ransrc)
+		values(#{shopname}, #{shoptel}, #{shopaddress}, #{shoptime}, #{ransrc})
 	</insert>
 	
 	<select id="ShopList" resultType="org.mj.model.ShopDTO">
