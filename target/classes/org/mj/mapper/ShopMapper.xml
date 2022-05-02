@@ -12,4 +12,13 @@
 	<select id="ShopList" resultType="org.mj.model.ShopDTO">
 		select * from coffeeshop
 	</select>
+	
+	<select id="ShopDetail" resultType="org.mj.model.ShopDTO">
+		select * from coffeeshop
+		where shopno = #{shopno}
+	</select>
+	
+	<select id="ShopReview" resultType="org.mj.model.ReviewDTO">
+		select * from review
+	</select>
 </mapper>

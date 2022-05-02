@@ -41,9 +41,19 @@ public class ReviewController {
 	
 	// 리뷰쓰기가 이루어지는 컨트롤러 
 	@RequestMapping(value = "/review/reviewWrite", method = RequestMethod.POST)
-	public String reviewWritePost(ReviewDTO rdto) {
-		rservice.ReviewWrite(rdto);
-		return "redirect:/review/myReview";
+	public String reviewWritePost(ReviewDTO rdto,  HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		MemberDTO mdto = (MemberDTO)session.getAttribute("session");
+		try {
+			String uId = mdto.getU_id();
+			if(uId != null && uId != "") {
+				rservice.ReviewWrite(rdto);
+			}
+			return "redirect:/review/myReview";
+		} catch (NullPointerException ne){
+			return "/member/login";
+		}
+
 	}
 	
 	// 리뷰수정으로 가기위한 컨트롤러

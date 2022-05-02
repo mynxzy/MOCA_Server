@@ -90,7 +90,7 @@
                 <ul class="cafeList">
 	                <c:forEach items="${slist}" var="list">
 						<li>
-							<a href="/shop/shopDetail">
+							<a href="/shop/shopDetail?shopno=${list.shopno}">
 								<input type="hidden" value="${list.shopno}">
 								<img src="${list.ransrc}">
 								<p>${list.shopname}</p>

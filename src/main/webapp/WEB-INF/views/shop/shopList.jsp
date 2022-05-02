@@ -31,11 +31,13 @@
 			<ul>
 		    	<c:forEach items="${slist}" var="list">
 					<li>
-						<input type="hidden" value="${list.shopno}">
-			            <h2>${list.shopname}</h2>
-			            <p>영업시간 : ${list.shoptime}</p>
-			            <p>${list.shopaddress}</p> 	
-			            <p>${list.shoptel}</p>
+						<a href="/shop/shopDetail?shopno=${list.shopno}">
+							<input type="hidden" value="${list.shopno}">
+				            <h2>${list.shopname}</h2>
+				            <p>영업시간 : ${list.shoptime}</p>
+				            <p>${list.shopaddress}</p> 	
+				            <p>${list.shoptel}</p>
+			            </a>
 					</li>
 				</c:forEach>
 			</ul>

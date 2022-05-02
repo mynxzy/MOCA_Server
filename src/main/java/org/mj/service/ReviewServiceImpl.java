@@ -12,7 +12,7 @@ public class ReviewServiceImpl implements ReviewService{
 	@Autowired
 	ReviewMapper rmapper;
 	
-	// 리뷰 등
+	// 리뷰 등록
 	public void ReviewWrite(ReviewDTO rdto) {
 		rmapper.ReviewWrite(rdto);
 	}

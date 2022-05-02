@@ -21,6 +21,7 @@
         <form action="/review/reviewWrite" method="post">
         	<input type="hidden" name="u_id" value="${session.u_id}">
             <input type="hidden" name="nick" value="${session.u_nick}">
+            <input type="text" name="shopno">
             <div>
                 <p>제목</p>
                 <input type="text" name="title" class="title">

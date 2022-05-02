@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.mj.model.ReviewDTO;
 
 public interface ReviewMapper {
+	
 	// 리뷰등록
 	public void ReviewWrite(ReviewDTO rdto);
 	

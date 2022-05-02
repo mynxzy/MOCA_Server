@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#wrap{
+    padding: 20px;
+}
+ul{
+	position: relative;
+    width: 100%;
+}
+ul li{
+    border-bottom: 1px solid #ccc;
+}
+ul .cafe{
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+ul li .rw{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+ul li .rw a{
+	margin-left: 10px;
+    color: #777;
+}
+ul li h2{
+    margin-bottom: 20px;
+}
+ul li p{
+    margin: 10px 0;
+}
+ul li .img{
+    text-align: center;
+    margin-bottom: 20px;
+}
+ul li img{
+    width: 200;
+    height: 200px;
+}

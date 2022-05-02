@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.mj.model.MemberDTO;
+import org.mj.model.ReviewDTO;
 import org.mj.model.ShopDTO;
 import org.mj.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,9 @@ public class ShopController {
 	
 	// shopDetial 페이지로 가기위한 컨트롤러
 	@RequestMapping(value = "/shop/shopDetail", method = RequestMethod.GET)
-	public String shopDetailGet() {
+	public String shopDetailGet(int shopno, Model model, ReviewDTO rdto) {
+		model.addAttribute("sdetail", sservice.ShopDetail(shopno));
+		model.addAttribute("srlist", sservice.ShopReview(rdto));
 		return "/shop/shopDetail";
 	}
 }

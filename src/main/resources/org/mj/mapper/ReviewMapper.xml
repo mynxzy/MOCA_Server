@@ -4,30 +4,30 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.mj.mapper.ReviewMapper">
 
-  <insert id="ReviewWrite">
-	insert into review(title, content, nick, u_id)
-	values(#{title}, #{content}, #{nick}, #{u_id})
-  </insert>
-  
-  <select id="ReviewList" resultType="org.mj.model.ReviewDTO">
-  	select * from review
-  	where u_id = #{u_id}
-  </select>
-  
-  <select id="ReviewModify" resultType="org.mj.model.ReviewDTO">
-  	select * from review
-  	where rno = #{rno}
-  </select>
-  
-  <update id="ReviewModifySet">
-  	update review
-	set title = #{title},
-		content = #{content}
-	where rno = #{rno}
-  </update>
-  
-  <delete id="ReviewRemove">
-	delete from review
-	where rno = #{rno}
-  </delete>
+	<insert id="ReviewWrite">
+		insert into review(title, content, nick, u_id, shopno)
+		values(#{title}, #{content}, #{nick}, #{u_id}, #{shopno})
+	 </insert>
+	 
+	 <select id="ReviewList" resultType="org.mj.model.ReviewDTO">
+	 	select * from review
+	 	where u_id = #{u_id}
+	 </select>
+	 
+	 <select id="ReviewModify" resultType="org.mj.model.ReviewDTO">
+	 	select * from review
+	 	where rno = #{rno}
+	 </select>
+	 
+	 <update id="ReviewModifySet">
+	 	update review
+		set title = #{title},
+			content = #{content}
+		where rno = #{rno}
+	 </update>
+	 
+	 <delete id="ReviewRemove">
+		delete from review
+		where rno = #{rno}
+	 </delete>
 </mapper>
