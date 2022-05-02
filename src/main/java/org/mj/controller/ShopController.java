@@ -56,4 +56,10 @@ public class ShopController {
 		model.addAttribute("srlist", sservice.ShopReview(rdto));
 		return "/shop/shopDetail";
 	}
+	
+	// shop검색후 목록 리스트
+	@RequestMapping(value = "/shop/shopSearch", method = RequestMethod.POST)
+	public String shopSearchPost() {
+		return "";
+	}
 }

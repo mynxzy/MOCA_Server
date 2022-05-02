@@ -79,7 +79,7 @@
 
         <div id="container">
             <div class="row1">
-            	<form action="" class="searchBox">
+            	<form action="/shop/shopSearch" class="searchBox">
                     <input type="text" name="search" placeholder="검색하실 카페명을 입력해주세요" class="searchInput">
                     <input type="button" value="검색" class="scBtn">
                 </form>
@@ -105,6 +105,19 @@
                     <img src="./resources/img/right-arrow.png" alt="">
                 </a>
             </div><!--.row3-->
+            <div class="row4">
+                <div class="bn">
+                    <div>
+                        <img src="./resources/img/6965986.jpg">
+                    </div>
+                    <div>
+                        <img src="./resources/img/24394.jpg">
+                    </div>
+                    <div>
+                        <img src="./resources/img/6283731.jpg">
+                    </div>
+                </div>
+            </div>
         </div><!--#container-->
 
         <footer id="footer">
