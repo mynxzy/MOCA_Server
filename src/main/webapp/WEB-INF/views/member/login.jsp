@@ -23,7 +23,10 @@
     <div id="wrap">
         <div class="title">
             <h1>로그인</h1>
-            <p><a href="/member/sign">회원가입</a></p>
+            <p>
+            	<a href="/index">홈으로</a>
+            	<a href="/member/sign">회원가입</a>
+            </p>
         </div><!--.title-->
         <form action="/member/login" method="post">
 	        <div class="signForm">
