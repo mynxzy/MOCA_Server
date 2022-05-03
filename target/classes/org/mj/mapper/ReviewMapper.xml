@@ -5,8 +5,8 @@
 <mapper namespace="org.mj.mapper.ReviewMapper">
 
 	<insert id="ReviewWrite">
-		insert into review(title, content, nick, u_id, shopno)
-		values(#{title}, #{content}, #{nick}, #{u_id}, #{shopno})
+		insert into review(title, content, nick, u_id)
+		values(#{title}, #{content}, #{nick}, #{u_id})
 	 </insert>
 	 
 	 <select id="ReviewList" resultType="org.mj.model.ReviewDTO">
