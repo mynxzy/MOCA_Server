@@ -33,6 +33,8 @@
 	                </li>
 	                <li>
 	                    <label for="userId"><span>아이디</span><input type="text" id="userId" name="u_id" class="box"></label>
+	                    <span class="idInputOk">사용 가능한 아이디입니다.</span>
+	                    <span class="idInputNo">아이디가 이미 존재합니다.</span>
 	                </li>
 	                <li>
 	                    <label for="userPw"><span>비밀번호</span><input type="password" id="userPw" name="u_pw" class="box"></label>
@@ -60,5 +62,6 @@
   
     <!-- script -->
     <script type="text/javascript" src="../resources/js/sign.js"></script>
+
 </body>
 </html>

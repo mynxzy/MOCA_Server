@@ -3,6 +3,9 @@ package org.mj.mapper;
 import org.mj.model.MemberDTO;
 
 public interface MemberMapper {
+	// 아이디 중복체크
+	public int idChk(String memberId);
+	
 	// 회원가입을 위한 insert
 	public void MemberInsert(MemberDTO mdto);
 	

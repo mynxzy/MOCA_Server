@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MemberController {
@@ -33,6 +34,18 @@ public class MemberController {
 			return "redirect:/member/login";
 		}
 		
+	}
+	
+	// 아이디중복체크 
+	@RequestMapping(value = "/idChk", method = RequestMethod.POST)
+	@ResponseBody
+	public String idChk(String memberId) {
+		int result = mservice.idChk(memberId);
+		if(result != 0) {
+			return "fail";
+		} else {
+			return "success";
+		}
 	}
 	
 	// 회원가입 화면으로 가기위한 컨트롤러

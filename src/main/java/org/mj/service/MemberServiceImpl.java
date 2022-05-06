@@ -10,6 +10,12 @@ public class MemberServiceImpl implements MemberService{
 	@Autowired
 	MemberMapper mmapper;
 	
+	// 아이디 중복확인
+	public int idChk(String memberId) {
+		int result = mmapper.idChk(memberId);
+		return result;
+	}
+	
 	// 회원가입하면 정보가 insert
 	public void MemberInsert(MemberDTO mdto) {
 		mmapper.MemberInsert(mdto);

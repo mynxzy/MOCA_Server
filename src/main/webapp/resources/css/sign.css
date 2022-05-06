@@ -55,3 +55,16 @@
     color: #fff;
     background-color: #333;
 }
+
+ul li .idInputOk{
+	color : green;
+	display: none;
+	text-align: center;
+	line-height: 1em;
+}
+ul li .idInputNo{
+	color : red;
+	display: none;
+	text-align: center;
+	line-height: 1em;
+}

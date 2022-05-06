@@ -3,33 +3,38 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.mj.mapper.MemberMapper">
+	
+	<select id="idChk" resultType="int">
+		select count(*) from member
+		where u_id = #{u_id}
+	</select>
 
-  <insert id="MemberInsert">
-  	insert into member(u_name, u_id, u_pw, u_nick, u_tel, u_email, u_address, b_number)
-  	values(#{u_name}, #{u_id}, #{u_pw}, #{u_nick}, #{u_tel}, #{u_email}, #{u_address}, #{b_number})
-  </insert>
-  
-  <select id="Login" resultType="org.mj.model.MemberDTO">
- 	select * from member 
- 	where u_id=#{u_id} and u_pw=#{u_pw}
-  </select>
-  
-  <select id="MemberModify" resultType="org.mj.model.MemberDTO">
-  	select * from member
-  	where u_id = #{u_id}
-  </select>
-  
-  <update id="memberModify">
-  	update member
-  	set u_nick = #{u_nick},
-  		u_tel = #{u_tel},
-  		u_email = #{u_email},
-  		u_address = #{u_address}
-  	where u_id = #{u_id}
-  </update>
-  
-  <delete id="MemberDelete">
-  	delete from member 
-	where u_id = #{u_id} and u_pw = #{u_pw}
-  </delete>
+	<insert id="MemberInsert">
+	 	insert into member(u_name, u_id, u_pw, u_nick, u_tel, u_email, u_address, b_number)
+	 	values(#{u_name}, #{u_id}, #{u_pw}, #{u_nick}, #{u_tel}, #{u_email}, #{u_address}, #{b_number})
+	</insert>
+	 
+	<select id="Login" resultType="org.mj.model.MemberDTO">
+		select * from member 
+		where u_id=#{u_id} and u_pw=#{u_pw}
+	</select>
+	 
+	<select id="MemberModify" resultType="org.mj.model.MemberDTO">
+	 	select * from member
+	 	where u_id = #{u_id}
+	</select>
+	 
+	<update id="memberModify">
+	 	update member
+	 	set u_nick = #{u_nick},
+	 		u_tel = #{u_tel},
+	 		u_email = #{u_email},
+	 		u_address = #{u_address}
+	 	where u_id = #{u_id}
+	</update>
+	 
+	<delete id="MemberDelete">
+	 	delete from member 
+		where u_id = #{u_id} and u_pw = #{u_pw}
+	</delete>
 </mapper>

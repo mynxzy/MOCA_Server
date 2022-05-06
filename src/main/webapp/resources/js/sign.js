@@ -2,6 +2,27 @@
  * 
  */
 
+$('#userId').on("propertychange change keyup paste input", function(){
+	var memberId = $('#userId').val();
+	var data = {memberId : memberId};
+	
+	$.ajax({
+		type : "post",
+		url : "/idChk",
+		data : data,
+		success : function(result){
+//			console.log("성공 여부" + result);
+			if(result != 'fail'){
+				$('.idInputOk').css("display", "inline-block");
+				$('.idInputNo').css("display", "none");
+			} else{
+				$('.idInputNo').css("display", "inline-block");
+				$('.idInputOk').css("display", "none");
+			}
+		}
+	});
+})
+
 var regExp = /^[a-zA-Z0-9]{4,12}$/; //id, password 
 var regName = /^[가-힝]{2,}$/; //name 
 var regMail = /[a-z0-9]{2,}@[a-z0-9-]{2,}.[a-z0-9]{2,}/i; //mail

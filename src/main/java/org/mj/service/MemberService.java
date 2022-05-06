@@ -3,6 +3,9 @@ package org.mj.service;
 import org.mj.model.MemberDTO;
 
 public interface MemberService {
+	// 아이디 중복확인
+	public int idChk(String memberId);
+	
 	// 회원가입을 눌렀을때 member테이블에 insert
 	public void MemberInsert(MemberDTO mdto);
 	
